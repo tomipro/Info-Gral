@@ -1,0 +1,4 @@
+31,1,33.3,Juan Carlos Perez,231
+32,2,33.45,Alberto Caram,232
+33,3,21.6,Agutin Fortunato,233
+34,4,3.92,Adrian Kritz,554
