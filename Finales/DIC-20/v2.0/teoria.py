@@ -86,9 +86,9 @@ import random
 def cargarDi (lst):
     di = {}
     for item in lst:
-        clave = random.randint(1, 99)
+        clave = random.randint(1, 100)
         while clave in lst:
-            clave = random.randint(1, 99)
+            clave = random.randint(1, 100)
         di[clave]= item
     
     return di

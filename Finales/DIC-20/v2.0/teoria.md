@@ -31,7 +31,7 @@ main()
 ['Tom', 'Charly', 'Tommy', 'Tomas']
 ```
 
-*insert* es un metodo que modifica el parametro que se le pasa como no se retorna nada, lo unico que modifica mi lista original es el insert.
+*insert()* es un metodo que modifica el parametro que se le pasa y como no se retorna nada, lo unico que modifica mi lista original es el insert.
 
 ---
 
@@ -43,6 +43,7 @@ def main():
     b = 10
     e = 3
     print( ((num//(b**e)) % (b**e)) % (b**e) )
+
 main()
 ```
 
@@ -59,7 +60,7 @@ main()
 ```python
 456
 ```
-Ocurre porque la division entera me saca los digitos de la derecha y modulo me saca de la izquierda segun la cantidad de digitos que tengo
+Ocurre porque la division entera me saca los digitos de la derecha y modulo me saca de la izquierda segun la cantidad de digitos que tengo.
 
 ---
 
@@ -67,15 +68,16 @@ Ocurre porque la division entera me saca los digitos de la derecha y modulo me s
 
 ```python
 def fun(lst, val):
-    largo=len(lst)
+    largo = len(lst)
     for i in range(0,largo):
-        if lst[i]==val:
+        if lst[i] == val:
             lst.pop(i)
 
 def main():
     lst = [1,2,3,4,4,3,2,1]
-    fun(lst,2)
+    fun(lst, 2)
     print(lst)
+
 main()
 ```
 **¿Qué imprime al ejecutar el código?**
@@ -88,12 +90,12 @@ main()
     f) Ninguna de las anteriores
 
 **RESPUESTA CORRECTA:** *e)*
-```python
+```
 Da error al ejecutar el código
 ```
 Ocurre porque se elimina un valor pero el len sigue siendo el mismo. Cuando se recorre una lista mas veces que la cantidad de elementos que existen, Python tira un error: 
 
-![ejercicio3](/Finales/DIC-20/v2.0/ej3teoria.png)
+![ejercicio3](/Finales/DIC-20/v2.0/imgs/ej3teoria.png)
 
 ---
 
@@ -107,15 +109,15 @@ import random
 def cargarDi (lst):
     di = {}
     for item in lst:
-        clave = random.randint(1, 99)
+        clave = random.randint(1, 100)
         while clave in lst:
-            clave = random.randint(1, 99)
-        di[clave]= item
+            clave = random.randint(1, 100)
+        di[clave] = item
     
     return di
 
 def main():
-    lst=['Tom', 'Charly', 'Tommy', 'Tomas']
+    lst = ['Tom', 'Charly', 'Tommy', 'Tomas']
     di = cargarDi(lst)
     print(di)
 main()
