@@ -3,8 +3,24 @@ from typing import List, Tuple
 
 def aprobadas(lstAlumnos: List, lstMaterias: List, lstCursadas: List, nombreApellido: str) -> List[Tuple]:
     data = (datos(lstAlumnos, lstMaterias, lstCursadas))
-    # alum = 
-    return data
+    alum = data[0]
+    mat = data[1]
+    curs = data[2]
+    nombres = list()
+
+    matAprobadas = list()
+
+    for i in mat:
+        for j in curs:
+            for k in alum:
+                if (i[0] == j[0] and (j[2] >= 4) and k[1] == nombreApellido and j[1] == k[0]):
+                    nomMat = i[1]
+                    nota = j[2]
+                    tupla = (nomMat, nota)
+                    matAprobadas.append(tupla)
+
+    return matAprobadas
+
 
 def datos(lstAlumnos: List, lstMaterias: List, lstCursadas: List) -> List[List]:
     alum = list()
@@ -16,13 +32,13 @@ def datos(lstAlumnos: List, lstMaterias: List, lstCursadas: List) -> List[List]:
         dato = i.split(",")
         dato[0] = int(dato[0])
         alum.append(dato)
-    
+
     for j in lstMaterias:
         j = j[:-1]
         dato = j.split(",")
         dato[0] = int(dato[0])
         mat.append(dato)
-    
+
     for k in lstCursadas:
         k = k[:-1]
         dato = k.split(",")
@@ -30,8 +46,9 @@ def datos(lstAlumnos: List, lstMaterias: List, lstCursadas: List) -> List[List]:
         dato[1] = int(dato[1])
         dato[2] = float(dato[2])
         curs.append(dato)
-    
+
     return [alum, mat, curs]
+
 
 def main():
     print("Prueba para el EJ01")
