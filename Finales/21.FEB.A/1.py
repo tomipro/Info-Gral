@@ -6,7 +6,6 @@ def aprobadas(lstAlumnos: List, lstMaterias: List, lstCursadas: List, nombreApel
     alum = data[0]
     mat = data[1]
     curs = data[2]
-    nombres = list()
 
     matAprobadas = list()
 
