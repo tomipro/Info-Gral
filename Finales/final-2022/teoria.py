@@ -25,6 +25,7 @@ def main():
 main()
 
 """
+'''
 def figura(b):
     for  f in range(0,b):
         for c in range(0, b):
@@ -42,3 +43,5 @@ def main():
     fun(miVar)
     print(miVar)
 main()
+
+'''

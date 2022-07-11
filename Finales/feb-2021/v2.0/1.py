@@ -1,15 +1,61 @@
 from typing import List, Tuple
 
 
-def minimos(lstEnergia: List) -> Tuple:
-    pass
+def bubbleSort(arr: List):
+    n = len(arr)
+    for i in range(0, n):
+        swapped = False
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
+                swapped = True
+
+        if not swapped:
+            return
+
+
+def minimos(lstEnergia: List) -> List[Tuple]:
+    lstDatos = datos(lstEnergia)
+    lstGen = list()
+
+    for i in lstDatos:
+        lstGen.append(i[2])
+    
+    bubbleSort(lstGen)
+    
+    lstGen = lstGen[0]
+
+    for j in lstDatos:
+        if j[2] == lstGen:
+            anio = j[0][:2]
+            anioMes = j[0][:4]
+            energia = j[2]
+            tupla = (anio, energia)
+            tupla2 = (anioMes, energia)
+
+    return ([tupla, tupla2])
+
+
+def datos(lstEnergia: List) -> List:
+    lstDatos = list()
+
+    for i in lstEnergia:
+        i = i[:-1]
+        dato = i.split(",")
+        dato[1] = int(dato[1])
+        dato[2] = float(dato[2])
+        lstDatos.append(dato)
+
+    return lstDatos
 
 
 def main():
     print("Prueba para el EJ01")
     lstEnergia = ['101205,1,24.2\n', '110607,8,54.4\n', '120318,3,18.1\n',
                   '090501,9,88.4\n', '101209,1,26.8\n', '101217,3,22.4\n', '190101,8,44.0\n']
-    (minimos(lstEnergia))
+    print(minimos(lstEnergia))
 
 
 main()
