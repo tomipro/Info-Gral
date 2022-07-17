@@ -37,7 +37,7 @@ se declaro el valor de **'i'**. No se puede hacer logica con un valor que no se 
 Python tira un error:
 
 
-![ejercicio1teoria](/Finales/feb-2021/v2.0/imgs/ej1teoria.png)
+![ejercicio1teoria](/Finales/21.FEB.A/imgs/ej1teoria.png)
 
 ---
 
@@ -77,7 +77,7 @@ Da error al ejecutar el código
 ```
 Ocurre porque se elimina un valor pero el len sigue siendo el mismo. Cuando se recorre una lista mas veces que la cantidad de elementos que existen, Python tira un error: 
 
-![ejercicio3toeria](/Finales/feb-2021/v2.0/imgs/ej2teoria.png)
+![ejercicio3toeria](/Finales/21.FEB.A/imgs/ej2teoria.png)
 
 ---
 
