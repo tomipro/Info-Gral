@@ -95,7 +95,7 @@ Da error al ejecutar el código
 ```
 Ocurre porque se elimina un valor pero el len sigue siendo el mismo. Cuando se recorre una lista mas veces que la cantidad de elementos que existen, Python tira un error: 
 
-![ejercicio3](/Finales/DIC-20/v2.0/imgs/ej3teoria.png)
+![ejercicio3](/Finales/20.DIC.A/imgs/ej3teoria.png)
 
 ---
 

@@ -79,7 +79,7 @@ El indice maximo que existe en *lst* es indice 5 y se quiere usar *pop()* para e
 
 *No se puede remover un elemento de una lista en un indice que no existe y por lo tanto, Python genera un error:*
 
-![EJ.T.2](/Finales/FEB-21_B/imgs/EJ.T.2.png)
+![EJ.T.2](/Finales/21.FEB.B/imgs/EJ.T.2.png)
 
 ---
 
@@ -117,7 +117,7 @@ En la linea 2 dentro de la funcion *fun*, se intenta modificar una tupla dentro 
 Esto **no** se puede hacer ya que ***las tuplas son inmutables*** (las listas si lo son).
 Ya que las tuplas no se pueden modificar, Python genera un error:
 
-![EJ.T.3](/Finales/FEB-21_B/imgs/EJ.T.3.png)
+![EJ.T.3](/Finales/21.FEB.B/imgs/EJ.T.3.png)
 
 ---
 
